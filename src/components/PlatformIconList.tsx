@@ -9,30 +9,32 @@ import {
 import { MdPhoneIphone } from 'react-icons/md';
 import { SiNintendo } from 'react-icons/si';
 import {BsGlobe} from 'react-icons/bs';
-import { Text } from "@chakra-ui/react";
+import { HStack, Icon } from "@chakra-ui/react";
 import { Platform } from "../hooks/useGames";
+import { IconType } from "react-icons";
 
 interface Props {
   platforms: Platform[]; //an array of Platform object
 }
 const PlatformIconList = ({ platforms }: Props) => {
-  const iconMap = {
+  const iconMap: { [key: string]: IconType } = {
     pc: FaWindows,
     playstation: FaPlaystation,
     xbox: FaXbox,
     nintendo: SiNintendo,
     mac: FaApple,
     linux: FaLinux,
+    android: FaAndroid,
     ios: MdPhoneIphone,
     web: BsGlobe
   }
 
   return (
-    <>
+    <HStack margin='10px'>
       {platforms.map((platform) => (
-        <Text>{platform.name}</Text>
+        <Icon as={iconMap[platform.slug]} color='gray.500'/>
       ))}
-    </>
+    </HStack>
   );
 };
 
