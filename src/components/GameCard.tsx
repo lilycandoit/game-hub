@@ -10,7 +10,7 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card
+    <Card width='300px'
       borderRadius={10}
       overflow="hidden" //because the image bigger the container so the borderradius works for the lower corners only
     >
