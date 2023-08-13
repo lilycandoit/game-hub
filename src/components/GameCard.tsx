@@ -10,7 +10,7 @@ interface Props {
 }
 
 const GameCard = ({ game }: Props) => {
-  console.log(game.parent_platforms)
+  console.log(game.parent_platforms);
   return (
     <Card>
       <Image src={getCroppedImageUrl(game.background_image)} />
