@@ -6,7 +6,6 @@ import GenreList from './components/GenreList';
 import NavBar from './components/NavBar';
 import PlatformSelector from './components/PlatformSelector';
 import SortSelector from './components/SortSelector';
-import { Platform } from './hooks/usePlatforms';
 
 // undefined: the absence of a value
 // null: the untentional absence of a value
