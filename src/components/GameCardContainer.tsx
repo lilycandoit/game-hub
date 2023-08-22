@@ -9,6 +9,7 @@ interface Props {
 const GameCardContainer = ({ children }: Props) => {
   return (
     <Box
+      _hover={{ transform: 'scale(1.05)', transition: 'transform .15s ease-in'}}
       borderRadius={10}
       overflow='hidden' //because the image bigger the container so the borderradius works for the lower corners only
     >
